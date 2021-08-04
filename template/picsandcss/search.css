@@ -63,7 +63,7 @@ main{
     
 }
 
-.card select {
+.card input {
     width: 40rem;
     height: 40px;
     border-radius: 20px;
@@ -79,7 +79,7 @@ main{
 }
 @media (max-width:767px) {
     
-    .card select {
+    .card input {
     width: 17rem;
     height: 40px;
     
@@ -94,8 +94,9 @@ main{
     height: 80px;
 }
 }
+
 @media (max-width:280px){
-    .card select {
+    .card input {
     width: 15rem;
     height: 40px;
     
