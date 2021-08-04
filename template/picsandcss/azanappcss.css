@@ -1,0 +1,196 @@
+body {
+    background: rgba(20, 20, 20, 0.4) url("mos.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.back {
+    padding: 110px;
+}
+
+
+.main-con {
+    height: 120rem;
+    background: rgba(0, 0, 0, 0.4) url("masjddd.jpg");
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    border-radius: 35px;
+    padding: 30px;
+}
+
+.main-con strong {
+    font-size: 40px;
+    font-weight: bold;
+}
+.main-con small{
+    font-size: 80px;
+}
+
+.main-con label {
+    /* font-size: 80px; */
+    font-size: 20px;
+    font-weight: bold;
+}
+.main-con b {
+    font-size: 70px;
+}
+
+.main-con span {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    opacity: .7;
+}
+
+.heading {
+    background-color: rgba(245, 248, 247, 0.7);
+    border-radius: 20px;
+
+
+
+}
+
+.city-name .fa {
+    font-size: 40px;
+    float: right;
+    margin-top: 20px;
+
+}
+
+.city-name p {
+    font-size: 35px;
+    font-weight: bold;
+    float: right;
+
+}
+
+.city-name sub {
+    margin-top: 2px;
+}
+
+.card {
+
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    margin-top: 30px;
+    border-radius: 10px;
+
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.card-text ul {
+    font-weight: bold;
+
+}
+
+.card-text li {
+    margin-top: 10px;
+    font-size: 17px;
+
+}
+
+.card-text li .fas {
+    margin-left: 20px;
+}
+.card .namaz-time{
+    width: 100px;
+}
+time .card {
+    background-color: red;
+}
+
+.sunmoon .fas {
+    margin-top: 10px;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.sunmoon {
+    background-color: rgba(255, 254, 254, 0.7);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.mp {
+    padding: 15px;
+    background-color: rgba(255, 254, 254, 0.5);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+
+}
+table{
+    font-size: 20px;
+}
+.tabs1 {
+background: rgb(4, 193, 226);
+background: radial-gradient(circle, rgba(7, 187, 211, 0.43) 0%, rgba(142, 192, 207, 0.428) 100%);
+}
+@media (max-width:778px){
+.main-con strong {
+    font-size: 30px;
+}
+
+.main-con b {
+    font-size: 60px;
+}
+
+.main-con span {
+    font-size: 30px;
+    
+}
+.city-name .fa {
+    font-size: 30px;
+    
+
+}
+
+.city-name p {
+    font-size: 20px;
+  
+
+}
+.main-con {
+    height: 160rem;
+}
+table{
+    font-size: 20px;
+}
+}
+@media (max-width:400px)
+{
+
+
+.main-con b {
+    font-size: 35px;
+    /* display: none; */
+
+}
+.card-text li {
+    margin-top: 15px;
+    font-size: 15px;
+
+}
+.card .namaz-time{
+    width: 50px;
+}
+.sunmoon .fas {
+    margin-top: 10px;
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+table{
+    font-size: 16px;
+}
+
+
+
+}

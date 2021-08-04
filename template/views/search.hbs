@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="search.css">
+
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+   <main >
+    <div class="container-fluid ">
+        <div class="row">
+            <div class=" col-12 d-flex justify-content-center align-items-center ">
+                <div class="card ">
+                   
+                        <img src="iconn.png" alt="" class="img-fluid" width="120px" height="120px" id="icon">
+                        <form action="" method="POST">
+                            <label for="">Select Country Name</label>
+                           <input type="text" name="country" placeholder="country name">
+                            <input type="text" name="city" placeholder="city name">
+
+                             {{!-- <div class=" col-sm-12 sel-tag">
+                                <select name="country" id="county">
+                                    <option value="">Select your country</option>
+                                     <option value="">pakistan</option>
+                                      <option value="">india</option>
+                                </select>
+                            </div>
+                            <label for=""> Select City Name</label>
+                            <div class=" col-sm-12 sel-tag">
+                               
+                                <select name="city" id="city" onclick="citydata()">
+                                    <option value="">Select your city</option>
+                                    <option value="">lahore</option>
+                                    <option value="">islamabad</option>
+                                </select>
+                            </div>  --}}
+                            <div class="d-flex justify-content-center mt-4">
+                                <button class="btn btn-success" >Submit</button>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   </main>
+
+
+
+
+
+   <script>
+    // // fetch("https://restcountries.eu/rest/v2/all")
+    // function showdata(){
+    //     fetch('https://countriesnow.space/api/v0.1/countries/population/cities')
+    
+    // .then(res => res.json())
+    // .then(data => initialize(data))
+    // .catch(err => console.log("Error:", err));
+    // }
+    // showdata();
+
+    // function city(){
+    //     showdata
+    // }
+
+    //      function getData() {
+    //             fetch('https://countriesnow.space/api/v0.1/countries/population/cities').then((resp) => {
+    //                 return resp.json();
+    //             }).then((data) => {
+    //                 data1 = data.data
+    //             })
+    //         }
+    //        console.log (getData());
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+//     // Global Variables
+const countriesList = document.getElementById("country");
+let countries; // will contain "fetched" data
+
+// Event Listeners
+// countriesList.addEventListener("change", event => displayCountryInfo(event.target.value));
+
+countriesList.addEventListener("change", newCountrySelection);
+
+function newCountrySelection(event) {
+  displayCountryInfo(event.target.value);
+}
+
+// fetch("https://restcountries.eu/rest/v2/all")
+// .then(function(res){
+//   // console.log(res);
+//   return res.json();
+// })
+// .then(function(data){
+//   // console.log(data);
+//   initialize(data);
+// })
+// .catch(function(err){
+//   console.log("Error:", err);
+// });
+
+fetch("https://restcountries.eu/rest/v2/all")
+// fetch('https://countriesnow.space/api/v0.1/countries/population/cities')
+
+.then(res => res.json())
+.then(data => initialize(data))
+.catch(err => console.log("Error:", err));
+
+function initialize(countriesData) {
+  countries = countriesData;
+  let options = "";
+  // for(let i=0; i<countries.length; i++) {
+  //   options += `<option value="${countries[i].alpha3Code}">${countries[i].name}</option>`;
+  //   // options += `<option value="${countries[i].alpha3Code}">${countries[i].name} (+${countries[i].callingCodes[0]})</option>`;
+  // }
+  countries.forEach(country => options+=`<option value="${country.alpha3Code}">${country.name}</option>`);
+  // document.getElementById("countries").innerHTML = options;
+  // document.querySelector("#countries").innerHTML = options;
+  countriesList.innerHTML = options;
+  // console.log(countriesList);
+  // console.log(countriesList.value);
+  // console.log(countriesList.length);
+  // console.log(countriesList.selectedIndex);
+  // console.log(countriesList[10]);
+  // console.log(countriesList[10].value);
+//   // console.log(countriesList[10].text);
+//   countriesList.selectedIndex = Math.floor(Math.random()*countriesList.length);
+//   displayCountryInfo(countriesList[countriesList.selectedIndex].value);
+}
+
+// function displayCountryInfo(countryByAlpha3Code) {
+//  const countryData = countries.find(country => country.alpha3Code === countryByAlpha3Code);
+// //   document.querySelector("#flag-container img").src = countryData.flag;
+// //   document.querySelector("#flag-container img").alt = `Flag of ${countryData.name}`;  
+// //   document.getElementById("capital").innerHTML = countryData.capital;
+// //   document.getElementById("dialing-code").innerHTML = `+${countryData.callingCodes[0]}`;
+// //   document.getElementById("population").innerHTML = countryData.population.toLocaleString("en-US");
+// //   document.getElementById("currencies").innerHTML = countryData.currencies.filter(c => c.name).map(c => `${c.name} (${c.code})`).join(", ");
+// //   document.getElementById("region").innerHTML = countryData.region;
+//   document.getElementById("city").innerHTML = countryData.city;
+// }
+</script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+
+
+<script>
+fetch("https://restcountries.eu/rest/v2/all")
+// fetch('https://countriesnow.space/api/v0.1/countries/population/cities')
+
+.then(res => res.json())
+.then(data => initialize(data))
+.catch(err => console.log("Error:", err));
+
+     function getData() {
+            fetch('https://countriesnow.space/api/v0.1/countries/population/cities').then((resp) => {
+                return resp.json();
+            }).then((data) => {
+                data1 = data.data
+            })
+        }
+       console.log (getData());
+</script>
+
+</body>
+
+</html>
