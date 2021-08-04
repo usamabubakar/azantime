@@ -75,5 +75,5 @@ app.post("/", (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`${Port}`);
+    console.log(`lisitening azan app..!${port}`);
 })
